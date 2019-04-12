@@ -26,6 +26,11 @@ pub enum FS {
 }
 
 impl Sstatus {
+    #[inline]
+    pub fn bits(&self) -> usize {
+        self.bits
+    }
+    
     /// User Interrupt Enable
     #[inline]
     pub fn uie(&self) -> bool {
